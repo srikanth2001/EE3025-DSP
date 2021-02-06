@@ -39,5 +39,5 @@ plt.savefig('../figs/ee18btech11023fft.pdf')
 plt.savefig('../figs/ee18btech11023_fft.eps')
 #subprocess.run(shlex.split("termux-open ../figs/yndft.pdf"))
 #else
-plt.show()
+#plt.show()
 
