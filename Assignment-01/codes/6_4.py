@@ -28,32 +28,28 @@ plt.title('Filter Output using FFT and IFFT')
 plt.xlabel('$n$')
 plt.ylabel('$y(n)$')
 plt.grid()
-plt.savefig('../figs/y_(n).pdf')
-plt.savefig('../figs/y_(n).eps')
+plt.savefig('../figs/y_n.pdf')
+plt.savefig('../figs/y_n.eps')
 plt.show()
 #subprocess.run(shlex.split("termux-open ../figs/y_n.pdf"))  #if using termex
 
 plt.figure(2)
+plt.subplot(2,1,1)
 plt.stem(range(0,6),x)
-plt.title('input signal')
+plt.title('input signal x(n) and its FFT')
 plt.xlabel('$n$')
 plt.ylabel('$x(n)$')
 plt.grid()# minor
-#plt.savefig('../figs/x_n.pdf')
-#plt.savefig('../figs/x_n.eps')
-#plt.show()
-#subprocess.run(shlex.split("termux-open ../figs/n_n.pdf"))  #if using termex
 
-plt.figure(3)
+plt.subplot(2,1,2)
 plt.stem(range(0,N),X)
-plt.title('FFT of input signal X(k)')
 plt.xlabel('$k$')
 plt.ylabel('$X(K)$')
 plt.grid()
-#plt.savefig('../figs/X_fft.pdf')
-#plt.savefig('../figs/X_fft.eps')
-#plt.show()
-#subprocess.run(shlex.split("termux-open ../figs/X_fft.pdf"))  #if using termex
+plt.savefig('../figs/inputsignal.pdf')
+plt.savefig('../figs/inputSignal.eps')
+plt.show()
+#subprocess.run(shlex.split("termux-open ../figs/inputSignal.pdf"))  #if using termex
 
 plt.figure(4)
 plt.stem(range(0,N),H)
