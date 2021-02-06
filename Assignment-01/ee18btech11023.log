@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.3.3)  6 FEB 2021 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=latex 2020.3.3)  6 FEB 2021 19:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1181,14 +1181,23 @@ Package multicol Warning: May not work with the twocolumn option on input line
 ) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
 Package: chngcntr 2009/09/02 v1.0a change counter resetting
 )
-(./ee18btech11023.aux)
+(./ee18btech11023.aux
+
+LaTeX Warning: Label `yn' multiply defined.
+
+
+LaTeX Warning: Label `yn' multiply defined.
+
+
+LaTeX Warning: Label `yn' multiply defined.
+
+)
 \openout1 = `ee18btech11023.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 65.
 LaTeX Font Info:    Try loading font information for OML+txmi on input line 65.
 
-
-(/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/txfonts/omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    ... okay on input line 65.
@@ -1304,36 +1313,45 @@ LaTeX Font Info:    Try loading font information for U+txsyc on input line 134.
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
-Underfull \hbox (badness 1762) in paragraph at lines 165--169
-\OT1/txr/m/n/12 out-put of the sys-tem when Unit Im-pulse
- []
+File: figs/x_n.eps Graphic file (type eps)
+ <figs/x_n.eps>
+File: figs/X_fft.eps Graphic file (type eps)
 
+<figs/X_fft.eps>
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--169
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 189.
 
- []
-
-File: figs/ee18btech11023_fft.eps Graphic file (type eps)
-<figs/ee18btech11023_fft.eps> [1
+File: figs/H_fft.eps Graphic file (type eps)
+<figs/H_fft.eps> [1
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 202.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 202.
+File: figs/y_(n).eps Graphic file (type eps)
+ <figs/y_(n).eps>
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 211.
+ [2
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 211.
  (./ee18btech11023.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 202.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 202.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 211.
 Package rerunfilecheck Info: File `ee18btech11023.out' has not changed.
 (rerunfilecheck)             Checksum: 1210BCF5FEAE7A75A114051724EF25E7;85.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 202.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 211.
  ) 
 Here is how much of TeX's memory you used:
- 31017 strings out of 492983
- 659714 string characters out of 6134923
- 888132 words of memory out of 5000000
- 34011 multiletter control sequences out of 15000+600000
+ 31026 strings out of 492983
+ 659819 string characters out of 6134923
+ 886132 words of memory out of 5000000
+ 34017 multiletter control sequences out of 15000+600000
  54754 words of font info for 123 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  55i,11n,67p,418b,1117s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on ee18btech11023.dvi (1 page, 14612 bytes).
+Output written on ee18btech11023.dvi (2 pages, 16248 bytes).
