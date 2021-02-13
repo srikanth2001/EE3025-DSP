@@ -172,8 +172,8 @@ https://github.com/srikanth2001/EE3025-DSP/blob/main/Assignment-01/ee18btech1102
 \end{align}
  \begin{figure}[h!]
     \centering
-    \includegraphics[width=9cm]{figs/inputSignal.eps}
-    \caption{input signal x(n) and FFT of x(n)}
+    \includegraphics[width=9cm]{figs/xh_1.eps}
+    \caption{input signal x(n) and Impulse responce h(n)}
     \label{yn}
 \end{figure}
 \item FFT of a Impulse Response $h(n)$ is 
@@ -182,8 +182,8 @@ https://github.com/srikanth2001/EE3025-DSP/blob/main/Assignment-01/ee18btech1102
 \end{align}
 \begin{figure}[]
     \centering
-    \includegraphics[width=9cm]{figs/H_fft.eps}
-    \caption{FFT of Impulse response H(k)}
+    \includegraphics[width=9cm]{figs/XH_fft.eps}
+    \caption{FFT of x(n)- X(k) and FFT of h(n)- H(k) }
     \label{yn}
 \end{figure}
 \item then  FFT of output Signal $y(n)$ can be computed  by 
@@ -201,6 +201,111 @@ https://github.com/srikanth2001/EE3025-DSP/blob/main/Assignment-01/ee18btech1102
     \label{yn}
 \end{figure}
 
+\item plotting  FFT of output signal 
+ \begin{figure}[h!]
+    \centering
+    \includegraphics[width=9cm]{figs/Y_1.eps}
+    \caption{FFT of output signal y(n)}
+    \label{yn}
+\end{figure}
+\end{enumerate}
+
+\section{problem}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+    \numberwithin{equation}{enumi}
+    \item Wherever possible, express all the above equations as matrix equations.
+\end{enumerate}
+\section{Solution}
+\begin{enumerate}[label=\thesection.\arabic*.,ref=\thesection.\theenumi]
+    \numberwithin{equation}{enumi}
+    \item FFT of signal X(n) 
+    \begin{align}
+        X(k) \triangleq \sum_{n=0}^{N-1} x(n) e^{-j 2 \pi k n / N}, \quad k=0,1, \ldots, N-1
+    \end{align}
+    \item Let $W_{N}^{n k}=e^{-j 2 \pi k n / N}$ then this can be $\mathrm{ex}-$ pressed interms of matrices as:
+    \begin{align}
+        \begin{bmatrix} X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) \end{bmatrix}
+=
+\begin{bmatrix}
+1 & 1 & 1 & 1 & 1 & 1 \\ 1 & W_N^1& W_N^2& W_N^3 & W_N^4 & W_N^5\\1 & W_N^2 & W_N^4 & W_N^6 & W_N^8 & W_N^{10}\\1 & W_N^3 & W_N^6 & W_N^9 & W_N^{12} & W_N^{15}\\1 & W_N^4 & W_N^8 & W_N^{12} & W_N^{16} & W_N^{20}\\1 & W_N^5 & W_N^{10} & W_N^{15} & W_N^{20} &W_N^{25}
+\end{bmatrix}%
+\begin{bmatrix}
+x(0) \\ x(1) \\ x(2) \\ x(3) \\ x(4) \\x(5)
+\end{bmatrix}
+    \end{align}
+ \item Given that $x(n)=\{1,2,3,4,2,1\}$
+and $\mathrm{As}, \mathrm{N}=6$ then above equation on multiplying matrices becomes
+\begin{align}
+    \begin{bmatrix} X(0) \\ X(1) \\ X(2) \\ X(3) \\ X(4) \\ X(5) \end{bmatrix}
+=
+\begin{bmatrix}
+1 +2+3+4+2+1 \\ 1+ (2)e^{-j\pi /3} + ... + (1)e^{-j5\pi /3}\\ 1 + (2)e^{-2j\pi /3} + ... +(1)(e^{-2j5\pi /3}\\ 1 + (2)e^{-3j\pi /3} + ... + (1)e^{-3j5\pi /3}\\ 1 + (2)e^{-4j\pi /3} + ... + (1)e^{-4j5\pi /3}\\ 1 + (2)e^{-5j\pi /3} + ... + (1)e^{-5j5\pi /3}
+\end{bmatrix}
+\end{align}
+\item
+On solving we get,
+\begin{align}
+    \implies X(0) = 13 + 0j,\\
+    X(1) = -4 - 1.732j,\\
+    X(2) = 1 + 0j,
+    \\
+    X(3) = -1 + 0j,\\
+    X(4) = 1 + 0j,\\
+    X(5) = -4 + 1.732j
+\end{align}
+\item
+Now to find $H(k)$ we need to know h(n) first. So we will first calculate h(n). For that we need to first find the Y(z) by applying Z-transform on equation $\eqref{eq:1.0.2}$ i.e.,
+\begin{align}
+    Y(z) + \frac{1}{2}z^{-1}Y(z)=X(z) + z^{-2}X(z)
+\end{align}
+\begin{align}
+    \implies Y(z)=\frac{2(z^2+1)}{z(2z+1)}X(z)
+\end{align}
+\
+Now we can find H(z) using Y(z)\\
+ i.e.,
+\begin{align}
+    H(z) = \frac{Y(z)}{X(z)}
+\end{align}
+\begin{align}
+ H(z) = \frac{2(z^2+1)}{z(2z+1)}
+\end{align}
+\begin{align}
+ H(z) = \frac{1+z^{-2}}{1+\frac{1}{2}z^{-1}}
+\end{align}
+From this we can say that h(n) is,
+\begin{align}
+ h(n)= Z^{-1}\sbrak{\frac{1}{1+\frac{1}{2}z^{-1}} + \frac{z^{-2}}{1+\frac{1}{2}z^{-1}}}
+\end{align}
+\begin{align}
+ h(n)=\sbrak{\frac{-1}{2}}^nu(n) + \sbrak{\frac{-1}{2}}^{n-2}u(n-2)
+\end{align}
+\
+Now for the calculations we can \
+ assume that length of h(n) is same as length of x(n) i.e., N = 6.
+Similarly Now on solving  equation \eqref{eq:2.0.3} using matrix method for each value of k we get,
+
+\begin{align}
+    \begin{bmatrix} H(0) \\ H(1) \\ H(2) \\ H(3) \\ H(4) \\ H(5) \end{bmatrix}
+=
+\begin{bmatrix}
+h(0) + h(1) + h(2) + h(3) + h(4) + h(5) \\h(0) + h(1)e^{-j\pi /3} + ... + h(5)e^{-j5\pi /3}\\h(0) + h(1)e^{-2j\pi /3} + ... + h(5)e^{-2j5\pi /3}\\h(0) + h(1)e^{-3j\pi /3} + ... + h(5)e^{-3j5\pi /3}\\
+h(0) + h(1)e^{-4j\pi /3} + ... + h(5)e^{-4j5\pi /3}\\h(0) + h(1)e^{-5j\pi /3} + ... + h(5)e^{-5j5\pi /3}
+\end{bmatrix}
+\end{align}
+
+\item
+On solving we get,
+\begin{align}
+\implies H(0) = 1.28125 + 0j,\\
+ H(1) = 0.51625 - 0.5141875j,\\
+ H(2) = -0.078125 + 1.1095625j,\\
+ H(3) = 3.84375 + 0j,\\
+ H(4) = -0.071825 - 1.1095625j.\\
+ H(5) = 0.515625 + 0.5141875j
+\end{align}
+So,These values which we got are same as that of from the plots.
+\
 \end{enumerate}
 \end{document}
 
