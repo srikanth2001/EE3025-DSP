@@ -306,6 +306,36 @@ On solving we get,
 \end{align}
 So,These values which we got are same as that of from the plots.
 \
+
+\item We can now compute $Y(k)$ using 	Eq \eqref{eq:equation2}
+\begin{align}
+    Y(k) = X(k)H(k)
+    \label{eq:equation2}
+\end{align}
+So, $Y(k)$ is obtained element wise multiplication of $X(k)$ and $H(k)$
+\begin{equation}
+\renewcommand{\arraystretch}{1.45}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+Y(0) \\ Y(1) \\ Y(2) \\ Y(3) \\ Y(4) \\ Y(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+X(0)\cdot H(0) \\ X(1)\cdot H(1) \\ X(2)\cdot H(2) \\ X(3)\cdot H(3) \\ X(4)\cdot H(4) \\ X(5)\cdot H(5)
+\end{bmatrix}
+\end{equation}
+Computing the above expression we get,
+\begin{equation}
+\renewcommand{\arraystretch}{1.45}
+\setlength\arraycolsep{0.01pt}
+\begin{bmatrix} 
+Y(0) \\ Y(1) \\ Y(2) \\ Y(3) \\ Y(4) \\ Y(5) 
+\end{bmatrix}
+=
+\begin{bmatrix}
+16.6562+0j \\ -2.95312+1.16372j \\ -0.07812+1.10959j \\ -3.84375-9.27556j \\ -0.07812-1.10959j \\ -2.95312-1.16372j 
+\end{bmatrix}
+\end{equation}
 \end{enumerate}
 \end{document}
 
