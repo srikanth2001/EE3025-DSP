@@ -31,13 +31,15 @@
 \end{frame}
 
 % Uncomment these lines for an automatically generated outline.
-%\begin{frame}{Outline}
-%  \tableofcontents
-%\end{frame}
+\begin{frame}{Outline}
+ \tableofcontents
+\end{frame}
 
-\section{Introduction}
+\section{Problem}
 
 \begin{frame}{Question}
+
+\subsection{Assignment-01}
 Assignment-01
 \begin{itemize}
         \item Let \[ x(n) = \{\underset{\uparrow}{1},2,3,4,2,1 \} \]\\
@@ -47,6 +49,7 @@ Assignment-01
                 \item Wherever possible, express all the above equations as matrix equations.
             \end{itemize}
 \end{itemize}
+\subsection{Assignment-02}
 Assignment-02
 \begin{itemize}
     \item Filter Design
@@ -58,7 +61,7 @@ Assignment-02
 \end{itemize}
 \end{frame}
 
-\section{Solution }
+\section{Solution}
 \begin{frame}{Computing X(k), H(k) Using  FFT   }
  
 \begin{itemize}
@@ -78,7 +81,7 @@ Assignment-02
     \centering
     \includegraphics[width=8cm]{figs/XH_fft.eps}
 \end{figure}
-
+\subsection{Filter Output y(n)}
 \end{frame} 
 \begin{frame}{Filter Output Using FFT and IFFT}
 \begin{itemize}
@@ -181,7 +184,7 @@ y(0) \\ y(1) \\ y(2) \\ y(3) \\ y(4) \\ y(5)
 \end{bmatrix}
 \]
 \end{frame}
-
+\section{Filter Design}
 \begin{frame}{Filter Design Specifications}
 \begin{itemize}
     \item \textbf{Tolerances:}\\
@@ -195,6 +198,7 @@ attenuation.\\~\\
 The Frequency band within which signals are not transmitted by filter or with a large attenuation.\\~\\
 \end{itemize}
 \end{frame}
+\subsection{The Bilinear Transform}
 \begin{frame}{The Bilinear Transform}
     \smallskip \hspace{2ex} It is a technique in Signal Processing that is used to Continuous-Time System
 Representations to Discrete-Time System Representations and vice-versa. The bilinear transform is a first-order approximation of the natural logarithm function that is an exact mapping of the z-plane to the s-plane. When the Laplace transform is performed on a discrete-time signal (with each element of the discrete-time sequence attached to a correspondingly delayed unit impulse), the result is precisely the $\mathrm{Z}$ transform of the discrete-time sequence with the substitution of $z=e^{s t}$\\~\\
@@ -218,6 +222,7 @@ $H_{d}\left(e^{j \omega_{d} T}\right)=H_{a}\left(j \frac{2}{T} \cdot \tan \left(
 
 $\omega_{a}=\frac{2}{T} \tan \left(\omega_{d} \frac{T}{2}\right)$
 \end{frame}
+\subsection{The FIR Filter}
 \begin{frame}{The FIR Filter}
 The lowpass filter has a pass frequency $\omega_{l}$ and transition band $\Delta \omega$ with Stop Band Tolerance $\delta$ is
 $h_{l p}(n)=\frac{\sin \left(n \omega_{l}\right)}{n \pi} w(n)$
