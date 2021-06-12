@@ -30,6 +30,7 @@
   \titlepage
 \end{frame}
 
+% Uncomment these lines for an automatically generated outline.
 \begin{frame}{Outline}
  \tableofcontents
 \end{frame}
@@ -200,27 +201,11 @@ The Frequency band within which signals are not transmitted by filter or with a 
 \subsection{The Bilinear Transform}
 \begin{frame}{The Bilinear Transform}
     \smallskip \hspace{2ex} It is a technique in Signal Processing that is used to Continuous-Time System
-Representations to Discrete-Time System Representations and vice-versa. The bilinear transform is a first-order approximation of the natural logarithm function that is an exact mapping of the z-plane to the s-plane. When the Laplace transform is performed on a discrete-time signal (with each element of the discrete-time sequence attached to a correspondingly delayed unit impulse), the result is precisely the $\mathrm{Z}$ transform of the discrete-time sequence with the substitution of $z=e^{s t}$\\~\\
-\textbf{Small Proof:}
+Representations to Discrete-Time System Representations and vice-versa. The bilinear transform is a first-order approximation of the natural logarithm function that is an exact mapping of the z-plane to the s-plane. \\
+\smallskip \hspace{2ex} When the Laplace transform is performed on a discrete-time signal (with each element of the discrete-time sequence attached to a correspondingly delayed unit impulse), the result is precisely the $\mathrm{Z}$ transform of the discrete-time sequence with the substitution of $z=e^{s t}$\\~\\
 
-$z=e^{s T}$
-$s=\frac{1}{T} \ln (z)$
-$s=\frac{2}{T}\left[\frac{z-1}{z+1}+\frac{1}{3}\left(\frac{z-1}{z+1}\right)^{3}+\frac{1}{5}\left(\frac{z-1}{z+1}\right)^{5}+\frac{1}{7}\left(\frac{z-1}{z+1}\right)^{7}+\cdots\right]$
-$s=\frac{2}{T} \frac{1-z^{-1}}{1+z^{-1}}$
 \end{frame}
-\begin{frame}{The Bilinear Transform}
-$H_{d}(z)=\left.H_{a}(s)\right|_{s=\frac{2}{T} \frac{z-1}{z+1}}=H_{a}\left(\frac{2}{T} \frac{z-1}{z+1}\right)$\\~\\
 
-$H_{d}\left(e^{j \omega_{d} T}\right)=H_{a}\left(\frac{2}{T} \frac{e^{j \omega_{d} T}-1}{e^{j \omega_{d} T+1}}\right)$\\~\\
-
-$H_{d}\left(e^{j \omega_{d} T}\right)=H_{a}\left(\frac{2}{T} \cdot \frac{\left(e^{j \omega_{d} T / 2}-e^{-j \omega_{d} T / 2}\right)}{\left(e^{j \omega_{d} T / 2}+e^{-j \omega_{d} T / 2}\right)}\right)$\\~\\
-
-$H_{d}\left(e^{j \omega_{d} T}\right)=H_{a}\left(j \frac{2}{T} \cdot \frac{\sin \left(\omega_{d} T / 2\right)}{\cos \left(\omega_{d} T / 2\right)}\right)$\\~\\
-
-$H_{d}\left(e^{j \omega_{d} T}\right)=H_{a}\left(j \frac{2}{T} \cdot \tan \left(\omega_{d} T / 2\right)\right)$\\~\\
-
-$\omega_{a}=\frac{2}{T} \tan \left(\omega_{d} \frac{T}{2}\right)$
-\end{frame}
 \subsection{The FIR Filter}
 \begin{frame}{The FIR Filter}
 The lowpass filter has a pass frequency $\omega_{l}$ and transition band $\Delta \omega$ with Stop Band Tolerance $\delta$ is
